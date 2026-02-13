@@ -54,8 +54,6 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  /* color: rgba(255, 255, 255, 0.87);
-  background-color: #242424; */
   color: #213547;
   background-color: #efefef;
 
@@ -89,14 +87,12 @@ textarea {
   background-image: url("./assets/hearts-1.jpg");
   background-repeat: repeat;
   background-clip: border-box;
-  background-size: 220px 220px;
+  background-size: 280px 280px;
 }
 
 .magic-border-1 {
   border: 10px solid transparent;
-  /* padding: 15px; */
   border-image: url("./assets/border-1.png") 20% round;
-  /* margin: -25px */
 }
 
 .paper-texture-1 {
@@ -111,7 +107,6 @@ textarea {
   background-repeat: repeat;
   background-clip: border-box;
   background-size: 200px 200px;
-  /* background-blend-mode: lighten; */
 }
 
 .question-gif-1 {
@@ -120,7 +115,6 @@ textarea {
   background-clip: border-box;
   background-size: contain;
   background-position: center;
-  /* height:200px; */
 }
 
 .thanks-gif-1 {
