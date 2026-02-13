@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+/* 237, 121, 91 */
+/* 250, 229, 219 */
+
+@theme {
+  --color-primary: rgb(237, 121, 91);
+  --color-primary-dark: rgb(147, 31, 01);
+  --color-secondary: rgba(250, 229, 219);
+
+  --font-preety: "Satoshi", "sans-serif";
+}
+
+
+.tilt-prism-font {
+  font-family: "Tilt Prism", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
+.charm-font {
+  font-family: "Charm", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.charm-font-bold {
+  font-family: "Charm", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.charm-font-italic {
+  font-family: "Charm", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+:root {
+  --fireworks-bg-color: rgba(0, 0, 0, 0.0);
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: "Satoshi", "sans-serif"; */
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  /* color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+  color: #213547;
+  background-color: #efefef;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @apply text-gray-800;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}
+
+input,
+textarea {
+  @apply text-center focus:border-primary border-gray-300 border-b-2 border-dashed outline-none p-1 md:p-2
+}
+
+textarea {
+  @apply max-h-20 min-h-10 font-preety
+}
+
+
+.bg-hearts-1 {
+  background-image: url("./assets/hearts-1.jpg");
+  background-repeat: repeat;
+  background-clip: border-box;
+  background-size: 220px 220px;
+}
+
+.magic-border-1 {
+  border: 10px solid transparent;
+  /* padding: 15px; */
+  border-image: url("./assets/border-1.png") 20% round;
+  /* margin: -25px */
+}
+
+.paper-texture-1 {
+  background-image: url("./assets/paper-texture-1.jpg");
+  background-repeat: repeat;
+  background-clip: border-box;
+  background-size: 80px 80px;
+}
+
+.paper-texture-2 {
+  background-image: url("./assets/paper-texture-2.jpg");
+  background-repeat: repeat;
+  background-clip: border-box;
+  background-size: 200px 200px;
+  /* background-blend-mode: lighten; */
+}
+
+.question-gif-1 {
+  background-image: url("./assets/question-gif-1.gif");
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+  background-position: center;
+  /* height:200px; */
+}
+
+.thanks-gif-1 {
+  background-image: url("./assets/thanks-gif-1.gif");
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+}
+
+
+
+.button2 {
+  @apply py-2 px-4 w-fit cursor-pointer text-primary-dark shadow-none border-2 border-primary rounded-lg bg-gray-100 hover:scale-98
+}
+
+.button2--red {
+  @apply border-red-500 text-red-500 transition-all font-semibold hover:bg-red-200
+}
+
+.button2--green {
+  @apply border-green-500 text-green-500 hover:scale-98 hover:bg-green-200 transition-all font-bold
+}
+
+.button {
+  @apply bg-primary hover:scale-98 py-2 px-4 rounded-md max-w-fit shadow-sm
+}
+
+.button--red {
+  @apply bg-red-400 hover:bg-red-500 transition-all
+}
+
+.button--green {
+  @apply bg-green-400 hover:bg-green-500 animate-pulse hover:animate-none;
+}
+
+.button--outline {
+  @apply py-2 px-4 w-fit bg-inherit text-primary-dark shadow-none border-2 border-primary
+}
