@@ -59,7 +59,7 @@ export default function Creator() {
         const data = Object.fromEntries(formData.entries());
 
         const base64 = createCardData(data)
-        showCopyBanner(`${window.location.host}/#/${base64}`)
+        showCopyBanner(`${window.location.host}${window.location.pathname}#/${base64}`)
 
         // :card param
         navigate(base64)
