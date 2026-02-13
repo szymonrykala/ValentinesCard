@@ -79,8 +79,10 @@ function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Creator />} />
-                    <Route path="card" element={<CardView />} />
-                    <Route path="thank-you" element={<ThanksPage />} />
+                    <Route path=":card" >
+                        <Route index element={<CardView />} />
+                        <Route path="thank-you" element={<ThanksPage />} />
+                    </Route>
                 </Route>
             </Routes>
         </BrowserRouter>

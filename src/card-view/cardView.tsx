@@ -40,7 +40,8 @@ export default function CardView() {
     }
 
     function handleYesButtonClick() {
-        navigate("/thank-you" + location.search)
+        // open thanks page at /:card/thank-you
+        navigate("thank-you" + location.search)
     }
 
     useEffect(() => {
