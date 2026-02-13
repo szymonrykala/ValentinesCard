@@ -17,7 +17,7 @@ function moveButtonRandomly(button: HTMLButtonElement) {
 
     console.log(randomX, randomY)
 
-    if(button.style.position !== "absolute"){
+    if (button.style.position !== "absolute") {
         button.style.position = "absolute"
     }
 
@@ -39,7 +39,7 @@ export default function CardView() {
         }
     }
 
-    function handleYesButtonClick(){
+    function handleYesButtonClick() {
         navigate("/thank-you" + location.search)
     }
 
@@ -53,19 +53,19 @@ export default function CardView() {
 
         <div className="rounded-md flex flex-col gap-1 md:gap-4 text-center relative items-center justify-between h-full">
             <span></span>
-            <h1 className="text-5xl md:text-7xl text-primary font-bold charm-font-bold">{cardData.name}</h1>
+            <h1 className="text-5xl md:text-7xl text-primary font-bold font-pretty">{cardData.name}</h1>
 
-            <h2 className="text-xl md:text-3xl text-primary-dark charm-font">{cardData.question}</h2>
+            <h2 className="text-xl md:text-3xl text-primary-dark font-pretty">{cardData.question}</h2>
 
             <div className="question-gif-1 h-50 md:h-70 self-stretch"></div>
 
             <div className="flex flex-row justify-between max-w-100 w-4/5 pb-4">
-                <button className="button2 button2--green" onClick={handleYesButtonClick}>TAK</button>
+                <button className="button button--green" onClick={handleYesButtonClick}>TAK</button>
 
                 <button ref={buttonRef}
                     onMouseEnter={handleMouseEnterButton}
                     onClick={handleMouseEnterButton}
-                    className="button2 button2--red">NIE</button>
+                    className="button button--red">NIE</button>
             </div>
         </div>
     )

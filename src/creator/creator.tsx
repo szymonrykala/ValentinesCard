@@ -60,7 +60,7 @@ export default function Creator() {
 
         const path = "/card" + setCardData(data)
         showCopyBanner(window.location.host + path)
-        // navigate(path);
+        navigate(path);
     }
 
     return (
@@ -76,13 +76,13 @@ export default function Creator() {
                     id="name"
                     placeholder="imię"
                     required
-                    className="text-5xl md:text-6xl p-3 text-primary charm-font font-bold"
+                    className="text-5xl md:text-6xl p-3 text-primary font-bold"
                 />
                 <textarea
                     rows={2}
                     name="question"
                     id="question"
-                    className="text-xl text-primary-dark charm-font"
+                    className="text-xl text-primary-dark"
                     placeholder="No zapytaj czy będzie walentynką"
                     defaultValue={"💝Zostaniesz moją walentynką?💝"}
                     required
@@ -91,7 +91,7 @@ export default function Creator() {
                 <textarea
                     name="thanks"
                     id="thanks"
-                    className="text-xl text-primary-dark charm-font"
+                    className="text-xl text-primary-dark"
                     placeholder="Napisz podziękowania"
                     required
                 >
@@ -103,11 +103,11 @@ export default function Creator() {
                     name="signature"
                     id="signature"
                     placeholder="Podpis..."
-                    className="italic w-fit self-end charm-font-italic text-gray-500"
+                    className="w-fit italic self-end text-gray-500"
                 />
                 <button
                     type="submit"
-                    className="button2 self-center text-sm"
+                    className="button self-center text-sm"
                 >
                     Stwórz kartkę
                 </button>

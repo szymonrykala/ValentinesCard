@@ -13,9 +13,9 @@ export default function ThanksPage() {
 
     return (
         <div className="flex flex-col justify-between gap-3 items-center h-full w-full">
-            <div className="thanks-gif-1 h-7/10"></div>
+            <div className="thanks-gif-1 h-7/10 w-full"></div>
             <h1
-                className="text-4xl md:text-4xl lg:text-5xl text-primary charm-font-bold text-center"
+                className="text-4xl md:text-4xl lg:text-5xl text-primary font-pretty font-bold text-center"
             >
                 {cardData?.thanks}
             </h1>
