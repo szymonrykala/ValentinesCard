@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useCardData } from "../hooks";
 import toast from 'react-hot-toast';
 
@@ -49,15 +50,19 @@ function showCopyBanner(valueToCopy: string) {
 }
 
 export default function Creator() {
-    const [, openCardView] = useCardData()
+    const navigate = useNavigate()
+    const [, createCardData] = useCardData()
 
     function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData.entries());
 
-        showCopyBanner(window.location.host + "/" + data)
-        openCardView(data)
+        const base64 = createCardData(data)
+        showCopyBanner(`${window.location.host}/#/${base64}`)
+
+        // :card param
+        navigate(base64)
     }
 
     return (

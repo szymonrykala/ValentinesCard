@@ -1,10 +1,9 @@
 import { useMemo } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 
 export function useCardData() {
     const params = useParams()
-    const navigate = useNavigate()
 
     const location = useLocation()
 
@@ -23,16 +22,15 @@ export function useCardData() {
     }, [params, location.pathname])
 
 
-    function goToCardView(data: Record<string, string>) {
+    function createCardData(data: Record<string, string>) {
         const data64 = btoa(
             encodeURIComponent(
                 JSON.stringify(data)
             )
         );
 
-        // open card view at /:card
-        navigate(data64)
+        return data64
     }
 
-    return [data, goToCardView]
+    return [data, createCardData]
 }

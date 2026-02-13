@@ -1,8 +1,7 @@
 import { StrictMode, useEffect, useRef } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Outlet, useLocation } from "react-router";
-import './index.css'
 import { Fireworks } from '@fireworks-js/react'
 import type { FireworksHandlers } from '@fireworks-js/react'
 
@@ -11,6 +10,8 @@ import CardView from "./card-view/cardView";
 import ThanksPage from './thanks/thanks';
 
 import { Toaster } from 'react-hot-toast';
+
+import './index.css'
 
 
 function Layout() {
@@ -75,7 +76,7 @@ function Layout() {
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Creator />} />
@@ -85,7 +86,7 @@ function App() {
                     </Route>
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
