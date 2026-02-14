@@ -26,7 +26,7 @@ function Layout() {
     }
 
     useEffect(() => {
-        if (location.pathname !== "/thank-you") {
+        if (!location.pathname.includes("thank-you")) {
             fireworksRef.current?.stop();
             fireworksRef.current?.clear();
             document.documentElement.style
